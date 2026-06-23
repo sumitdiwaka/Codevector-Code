@@ -8,7 +8,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // allow frontend to call this API
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",                    // local dev
+      "https://codevector-code.vercel.app/",       // apna actual Vercel URL daalo
+    ],
+  })
+); // allow frontend to call this API
 app.use(express.json());
 
 // Routes
