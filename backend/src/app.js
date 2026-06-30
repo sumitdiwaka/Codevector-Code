@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",                    // local dev
-      "https://codevector-code.vercel.app/",       // apna actual Vercel URL daalo
+      "https://codevector-code.vercel.app",       // apna actual Vercel URL daalo
     ],
   })
 ); // allow frontend to call this API
